@@ -1,3 +1,4 @@
-com/prototype/app/AppApplication.class
 com/prototype/app/config/MvcConfig.class
+com/prototype/app/AppApplication.class
+com/prototype/app/config/SecurityConfig.class
 com/prototype/app/controller/WebController.class

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
@@ -23,7 +23,7 @@
     <h1>Welcome to the Authentication and Authorization Simple Prototype Application</h1>
 
     <p>
-        This is a protype application built with Spring Boot and Thymeleaf.
+        This is a prototype application built with Spring Boot and Thymeleaf.
         The app showcases basic authentication and authorization security tactics with
         different user roles and permission levels.
     </p>
@@ -41,6 +41,14 @@
     <br/>
 
     <a th:href="@{/login}" class="login-btn">Login</a>
+
+    <div sec:authorize="isAuthenticated()">
+<!--        This content only shows up if the user is authenticated-->
+        <p>Hello <span sec:authentication="name">filler</span>!</p>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
 
     <p style="margin-top: 30px; font-size: 0.9em; color: #7f8c8d;">
         This is a sample application for educational purposes only.

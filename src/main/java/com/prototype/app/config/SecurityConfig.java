@@ -17,13 +17,14 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
    @Bean
    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-       http.authorizeHttpRequests(auth -> auth
-           .requestMatchers("/", "/home", "/login").permitAll()
-            .requestMatchers("/admin/**").hasRole("ADMIN")
-            .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-       ).formLogin(Customizer.withDefaults())
-       .logout(Customizer.withDefaults());
-       return http.build();
+        http.authorizeHttpRequests(auth -> auth
+           .requestMatchers("/", "/home", "/login", "/styles/**").permitAll()
+            .requestMatchers("/admin/**").hasRole("ADMIN") // for Admin page access
+            .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")) // for User page access
+            .formLogin((form) -> form
+                .loginPage("/login").permitAll())
+        .logout(Customizer.withDefaults());
+        return http.build();
    }
 
    @Bean
