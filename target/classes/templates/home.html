@@ -17,9 +17,10 @@
             background-color: #2980b9;
         }
     </style>
+    <link th:href="@{styles/default-ui.css}" rel="stylesheet" >
 </head>
 <body>
-<div>
+<div class="content">
     <h1>Welcome to the Authentication and Authorization Simple Prototype Application</h1>
 
     <p>
@@ -40,13 +41,13 @@
 
     <br/>
 
-    <a th:href="@{/login}" class="login-btn">Login</a>
+    <a sec:authorize="!isAuthenticated()" th:href="@{/login}" class="login-btn">Login</a>
 
     <div sec:authorize="isAuthenticated()">
 <!--        This content only shows up if the user is authenticated-->
         <p>Hello <span sec:authentication="name">filler</span>!</p>
         <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <button class="primary" type="submit">Sign Out</button>
         </form>
     </div>
 
