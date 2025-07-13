@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+        .login-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Welcome to the Authentication and Authorization Simple Prototype Application</h1>
+
+    <p>
+        This is a protype application built with Spring Boot and Thymeleaf.
+        The app showcases basic authentication and authorization security tactics with
+        different user roles and permission levels.
+    </p>
+
+    <p>
+        To explore the application's features, please log in using your credentials.
+        Please use one of the demo accounts:
+    </p>
+
+    <ul style="text-align: left; display: inline-block; margin-bottom: 20px;">
+        <li>Admin: admin/admin</li>
+        <li>Regular User: user/password</li>
+    </ul>
+
+    <br/>
+
+    <a th:href="@{/login}" class="login-btn">Login</a>
+
+    <p style="margin-top: 30px; font-size: 0.9em; color: #7f8c8d;">
+        This is a sample application for educational purposes only.
+    </p>
+</div>
+</body>
+</html>
