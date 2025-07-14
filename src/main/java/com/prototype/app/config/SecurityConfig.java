@@ -22,7 +22,9 @@ public class SecurityConfig {
             .requestMatchers("/admin/**").hasRole("ADMIN") // for Admin page access
             .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")) // for User page access
             .formLogin((form) -> form
-                .loginPage("/login").permitAll())
+                .loginPage("/login")
+                .defaultSuccessUrl("/home", true)
+                .permitAll())
         .logout(Customizer.withDefaults());
         return http.build();
    }
