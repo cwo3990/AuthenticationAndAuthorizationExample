@@ -25,7 +25,10 @@ public class SecurityConfig {
                 .loginPage("/login")
                 .defaultSuccessUrl("/home", true)
                 .permitAll())
-        .logout(Customizer.withDefaults());
+        .logout((logout) -> logout
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login?logout")
+                .permitAll());
         return http.build();
    }
 
