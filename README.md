@@ -1,3 +1,18 @@
-# Authentication And Authorization Example
+# Authentication and Authorization Example
 
-This prototype application demonstrates how to implement the "Authenticatation and Authorization" Security Tactics using Java Authentication and Authorization Services (JAAS).
+A simple Spring Boot application demonstrating basic authentication and authorization using Spring Security.
+
+## Features
+- User login/logout
+- Role-based access control
+- In-memory user storage
+- Basic web interface
+
+## Running the Application
+```bash
+mvn spring-boot:run
+```
+
+## Default Users
+- Admin: admin/admin
+- User: user/user

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Welcome, <span th:text="${username}"></span>!</p>
+    <p>Your roles: <span th:text="${roles}"></span></p>
+    
+    <div>
+        <a href="/admin/panel">Admin Panel</a> (Admin only)
+        <br>
+        <a href="/user/profile">User Profile</a> (Users and Admins)
+        <br><br>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

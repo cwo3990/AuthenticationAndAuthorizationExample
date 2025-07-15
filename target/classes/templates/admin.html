@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <p>Welcome, <span th:text="${username}"></span>!</p>
+    <p>This page is only accessible by administrators.</p>
+    
+    <div>
+        <h3>Admin Features:</h3>
+        <ul>
+            <li>Manage users</li>
+            <li>System settings</li>
+            <li>View reports</li>
+        </ul>
+    </div>
+    
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

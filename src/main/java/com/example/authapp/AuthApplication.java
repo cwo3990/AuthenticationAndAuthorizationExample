@@ -1,13 +1,13 @@
-package com.prototype.app;
+package com.example.authapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AppApplication {
+public class AuthApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppApplication.class, args);
+		SpringApplication.run(AuthApplication.class, args);
 	}
 
 }

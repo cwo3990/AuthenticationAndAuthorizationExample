@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+    <p>Welcome, <span th:text="${username}"></span>!</p>
+    <p>This page is accessible by users and administrators.</p>
+    
+    <div>
+        <h3>User Features:</h3>
+        <ul>
+            <li>View profile</li>
+            <li>Update settings</li>
+            <li>Change password</li>
+        </ul>
+    </div>
+    
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
