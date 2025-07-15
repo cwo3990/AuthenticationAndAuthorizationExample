@@ -1,5 +1,9 @@
 # Authentication and Authorization Example
 
+### Team
+- Devaj Mody
+- Connor O'Neill
+
 A simple Spring Boot application demonstrating basic authentication and authorization using Spring Security.
 
 ## Features

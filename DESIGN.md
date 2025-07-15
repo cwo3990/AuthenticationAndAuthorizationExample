@@ -1,5 +1,9 @@
 # Security Design Document
 
+### Team
+- Devaj Mody
+- Connor O'Neill
+
 ## Authentication and Authorization Quality Attributes
 
 ### 1. Authentication
